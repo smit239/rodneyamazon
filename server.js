@@ -8,7 +8,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Static directory
-app.use(express.static("/public"));
+const path = require ("path");
+app.use(express.static(path.join(__dirname,"../public")));
+
 
 // Routes
 // =============================================================
