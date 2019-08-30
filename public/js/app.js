@@ -38,7 +38,7 @@ const validate = function(item) {
 //this is the document ready function that says to render all the items in the database, to the table.
 $(document).ready(() => {
   $.ajax({
-    url: "/api/products",
+    url: "/models/products",
     type: "GET"
   }).then(function(rows) {
     renderItems(rows);
@@ -126,7 +126,7 @@ $(".btnPurchase").on("click", function (){
     }
      stockUpdate= newStock(inStocknow, inCartnow)
     $.ajax({
-      url: `/api/products/${cart[i].id}`,
+      url: `/models/products/${cart[i].id}`,
       type: "PUT",
       data: `stock_quantity= ${stockUpdate}`
     }).then(function(data) {

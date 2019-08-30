@@ -3,7 +3,7 @@ const db = require('../models');
 // ROUTING
 
 module.exports = function(app) {
-  app.get('/api/products', function(req, res) {
+  app.get('/models/products', function(req, res) {
     console.log("Hi")
     db.Product.findAll({}).then(function(rows) {
      console.log("rows")
@@ -14,7 +14,7 @@ module.exports = function(app) {
     });
   });
   // POST Request
-   app.post('/api/products', function(req, res) {
+   app.post('/models/products', function(req, res) {
     db.Product.create(req.body).then(function(rows) {
       res.json({ success: true });
     }).catch(function(error) {
@@ -23,7 +23,7 @@ module.exports = function(app) {
   });
   // GET Request
   // Responds with just the requested product at the referenced id
-  app.get('/api/products/:id', function(req, res) {
+  app.get('/models/products/:id', function(req, res) {
     db.Product.find({ where: { id: req.params.id }})
       .then(function(data){
         res.json(data);
@@ -32,7 +32,7 @@ module.exports = function(app) {
       });
   });
   // PUT Request
-  app.put('/api/products/:id', function(req, res) {
+  app.put('/models/products/:id', function(req, res) {
     db.Product.update(
       req.body,
       { where: { id: req.params.id } }
@@ -45,7 +45,7 @@ module.exports = function(app) {
   });
   // DELETE Request
 
-  app.delete('/api/products/:id', function(req, res) {
+  app.delete('/models/products/:id', function(req, res) {
     db.Product.destroy({ 
       where: { id: req.params.id } 
     }).then(function() {

@@ -27,5 +27,3 @@ db.sequelize.sync().then (function(){
   });
 });
  
-  // Starts our server on the predefined PORT
-  // Only starts if the db successfully syncs
