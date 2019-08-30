@@ -1,26 +1,27 @@
 {
-  "name": "rodneyamazon",
+  "name": "Bamazon",
   "version": "1.0.0",
-  "description": "Overview\r In this activity, you'll be creating an Amazon-like storefront with the MySQL and Sequelize skills you learned this unit. The web app will take in orders from customers and deplete stock from the store's inventory. As a challenge task, you can program your site to track product sales across your store's departments and then provide a summary of the highest-grossing departments in the store.",
-  "main": "index.js",
+  "description": "an Amazon-like storefront with the MySQL and Sequelize that will take in orders from customers and deplete stock from the store's inventory.",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./seeds/seed-db.js && node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/smit239/rodneyamazon.git"
+    "url": "git+https://github.com/anmariesmith/Bamazon.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/smit239/rodneyamazon/issues"
+    "url": "https://github.com/anmariesmith/Bamazon/issues"
   },
-  "homepage": "https://github.com/smit239/rodneyamazon#readme",
+  "homepage": "https://github.com/anmariesmith/Bamazon#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "mysql2": "^1.6.5",
-    "sequelize": "^5.16.0",
-    "sequelize-cli": "^5.5.0"
+    "express": "^4.16.4",
+    "mysql": "^2.17.1",
+    "mysql2": "^1.7.0",
+    "sequelize": "^4.41.0"
   }
 }

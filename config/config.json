@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "thanksB2god",
+    "password": "thanksB2god!",
     "database": "bamazon_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
@@ -17,11 +17,10 @@
   },
   "production": {
     "username": "root",
-    "password": "thanksB2god",
-    "database": "production_db",
+    "password": null,
+    "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "operatorsAliases": false,
-    "use_env_variable": "JAWSDB_URL"
+    "operatorsAliases": false
   }
 }

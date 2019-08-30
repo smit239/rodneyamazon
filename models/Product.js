@@ -1,13 +1,18 @@
-'use strict';
-module.exports = (sequelize, DataTypes) => {
-  const Product = sequelize.define('Product', {
-    product_name: DataTypes.STRING, 
-    department_name: DataTypes.STRING, 
-    price: DataTypes.DECIMAL,
-    stock_quantity: DataTypes.INTEGER
-  }, {});
-  Product.associate = function(models) {
-    // associations can be defined here
+module.exports = function(connection, Sequelize) {
+    const Product = connection.define(
+      "Product",
+      {
+        product_name: Sequelize.STRING,
+        department_name: Sequelize.STRING,
+        price: Sequelize.STRING,
+        stock_quantity: {
+          type: Sequelize.INTEGER,
+          validate: { min: 1 }
+        }
+      },
+      { timestamps: false }
+    );
+  
+    return Product;
   };
-  return Product;
-};
+  

@@ -1,27 +1,29 @@
-
+/*------------------------
+    HIDE CLASS
+---------------------------*/
 
 .hide {
-    display: none;
-  }
-  
-  .btn {
-    background-color: red;
-    border:none;
-  }
-  
-  .btn:hover {
-      background-color: black;
-  }
-  
-  th{
-    text-align: center;
-  }
-  
-  td{
-    text-align: center;
-  }
-  
-  .bamazonLogo{
-    height: 75px;
-  
-  }
+  display: none;
+}
+
+.btn {
+  background-color: orange;
+  border:none;
+}
+
+.btn:hover {
+    background-color: black;
+}
+
+th{
+  text-align: center;
+}
+
+td{
+  text-align: center;
+}
+
+.bamazonLogo{
+  height: 50px;
+
+}
