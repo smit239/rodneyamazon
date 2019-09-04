@@ -38,7 +38,7 @@ const validate = function(item) {
 //this is the document ready function that says to render all the items in the database, to the table.
 $(document).ready(() => {
   $.ajax({
-    url: "/models/products",
+    url: "../models/products",
     type: "GET"
   }).then(function(rows) {
     renderItems(rows);
