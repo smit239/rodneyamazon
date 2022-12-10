@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/smit239/bamazon/blob/master/README.md",
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "mysql": "^2.17.1",
     "mysql2": "^1.7.0",
     "sequelize": "^4.41.0"
